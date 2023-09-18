@@ -1,0 +1,9 @@
+[book]
+title = "mdbook sample"
+authors = ["mdbook sample Taro"]
+language = "ja"
+multilingual = false
+src = "src"
+
+[output.html.print]
+enable = false

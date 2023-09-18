@@ -1,0 +1,9 @@
+services:
+  mdbook:
+    build: ./mdbook
+    volumes:
+      - ./mdbook:/app
+    environment:
+      - USER=user
+    ports:
+      - 9090:9090
