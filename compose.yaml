@@ -10,7 +10,7 @@ services:
   starlight:
     build: ./astro-starlight
     volumes:
-      - ./starlight:/app
+      - ./astro-starlight:/app
     environment:
       - USER=user
     ports:
@@ -22,3 +22,12 @@ services:
       - ./astro-starlight:/app
     ports:
       - 3000:3000
+  hugo:
+    image: klakegg/hugo:latest
+    environment:
+      - USER=user
+    volumes:
+      - ./hugo:/src
+    command: server -D
+    ports:
+      - "1313:1313"
