@@ -5,7 +5,7 @@ import starlight from '@astrojs/starlight';
 export default defineConfig({
 	integrations: [
 		starlight({
-			title: 'My Docs',
+			title: 'Astro Starlight Test',
 			social: {
 				github: 'https://github.com/withastro/starlight',
 			},
@@ -20,6 +20,10 @@ export default defineConfig({
 				{
 					label: 'Reference',
 					autogenerate: { directory: 'reference' },
+				},
+				{
+					label: 'テスト',
+					autogenerate: { directory: 'Test' },
 				},
 			],
 		}),

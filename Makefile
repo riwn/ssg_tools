@@ -9,4 +9,4 @@ serve-mdbook:# なんかうまく起動できない
 build-starlight:
 	docker compose run --rm node npm run build
 serve-starlight:
-	docker compose up -d starlight
+	docker compose up -d starlight --build
