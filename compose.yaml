@@ -7,3 +7,18 @@ services:
       - USER=user
     ports:
       - 9090:9090
+  starlight:
+    build: ./astro-starlight
+    volumes:
+      - ./starlight:/app
+    environment:
+      - USER=user
+    ports:
+      - 8080:8080
+  node:
+    image: node:lts
+    working_dir: /app
+    volumes:
+      - ./astro-starlight:/app
+    ports:
+      - 3000:3000
